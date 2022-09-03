@@ -1,0 +1,83 @@
+### Create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Intan Permatasari",
+    "email":  "intan@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+### get all users
+GET http://localhost:5000/users
+
+### get users by id
+GET http://localhost:5000/users/ffd66b3b-563a-4851-8cbf-6a99d166bf70
+
+### Update a user
+PATCH http://localhost:5000/users/ffd66b3b-563a-4851-8cbf-6a99d166bf70
+Content-Type: application/json
+
+{
+    "name": "Intan Permatasari dwi",
+    "email":  "intan@gmail.com",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "user"
+}
+
+### Delete a user
+DELETE http://localhost:5000/users/ffd66b3b-563a-4851-8cbf-6a99d166bf70
+
+### Login User admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "dwi@gmail.com",
+    "password": "123456"
+}
+
+### Login User
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "intan@gmail.com",
+    "password": "123456"
+}
+
+### Me / get user login
+GET http://localhost:5000/me
+
+### Logout User
+DELETE http://localhost:5000/logout
+
+### !get all Product
+GET http://localhost:5000/products
+
+### get single Product
+GET http://localhost:5000/products/d87d6642-9cbd-4cbb-bed5-f0626de508ec
+
+### Create Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "Product 6",
+    "price": 992
+}
+
+### Update Product
+PATCH http://localhost:5000/products/12eb0b76-e311-4b91-a1f2-9dc226de8844
+Content-Type: application/json
+
+{
+    "name": "Product UPDATED",
+    "price": 123
+}
+
+### Update Product
+DELETE http://localhost:5000/products/d87d6642-9cbd-4cbb-bed5-f0626de508ec
